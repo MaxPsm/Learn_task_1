@@ -53,6 +53,16 @@ class tasks {
       }
     }
   }
+
+  object Task_3 {
+    def solution(s: String): Int = {
+      val splitString = s.split(" ")
+      if (splitString.nonEmpty) {
+        splitString.last.length
+      } else 0
+    }
+  }
+
 }
   object sol extends App {
     val a = new tasks
@@ -78,4 +88,11 @@ class tasks {
     // Task 2 = false
 
     println(s"Task 2 = ${a.Task2.solution_t2(0)}")
+
+    println(s"Task 3 = ${a.Task_3.solution("Hello World")}")
+    // Task 3 = 5
+    println(s"Task 3 = ${a.Task_3.solution("World")}")
+    // Task 3 = 5
+    println(s"Task 3 = ${a.Task_3.solution("")}")
+    // Task 3 = 5
 }

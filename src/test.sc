@@ -76,3 +76,6 @@ for (i <- 0 until b.length / 2) {
 }
 
 println(s"Task 2 = ${Task2.solution_t2(121)}")
+
+val r = "stance sik sik"
+r.split(" ").last.length
