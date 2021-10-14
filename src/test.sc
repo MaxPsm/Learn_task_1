@@ -1,3 +1,5 @@
+import Tasks.Task_4.{binary_find, get_shift}
+
 import scala.annotation.tailrec
 //def solution3(nums: Array[Int], target: Int): Array[(Int, Int)] = {
 //  val numsInd = nums.zipWithIndex.groupBy(a => a._1)
@@ -79,3 +81,14 @@ println(s"Task 2 = ${Task2.solution_t2(121)}")
 
 val r = "stance sik sik"
 r.split(" ").last.length
+
+val nums = Array(4, 5, 6, 7, 0, 1, 2)
+val mid = get_shift(nums, 0, nums.length - 1)
+val target = 1
+nums.length
+nums.length - mid
+
+binary_find(nums.slice(mid, nums.length), target, 0, nums.length - mid - 1)
+
+nums.slice(0, mid)
+nums.slice(mid, nums.length)

@@ -9,7 +9,7 @@ object Task_3 {
   }
 }
 
-object sol extends App{
+object sol3 extends App{
   println(s"Task 3 = ${Task_3.solution("Hello World")}")
   // Task 3 = 5
   println(s"Task 3 = ${Task_3.solution("World")}")

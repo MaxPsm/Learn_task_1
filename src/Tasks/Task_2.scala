@@ -38,4 +38,6 @@ object sol2 extends App {
 
   println(s"Task 2 = ${Task2.solution_t2(-101)}")
   // Task 2 = false
+
+  println(s"Task 2 = ${Task2.solution_t2(0)}")
 }
