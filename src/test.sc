@@ -96,3 +96,31 @@ nums.slice(mid, nums.length)
 
 
 nums.toSet.subsets(len).map(_.toList).toList foreach println
+
+case class ListNode(
+                     var x: Int = 0,
+                     var next: ListNode = null
+                   )
+
+val a = ListNode(2, ListNode(4, ListNode(3)))
+
+a.next
+
+def findTail (a : ListNode): ListNode = {
+  if (a.next != null) {
+    findTail(a.next)
+  } else a
+}
+
+def solution2 (acc: ListNode, l1: ListNode, l2: ListNode, carry: Int, pos:Int): ListNode = {
+  if (l1 == null && l2 == null && carry == 0) {
+    acc
+  } else  {
+    val sum = l1.x + l2.x + carry
+    val tail = findTail(acc)
+    println(tail)
+
+  }
+}
+
+findTail(a)
