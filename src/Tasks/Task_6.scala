@@ -8,10 +8,10 @@ case class ListNode(
                    )
 
 object Task_6 {
-  def addTwoNumbers(l1: ListNode, l2: ListNode): ListNode = {
-    val dummyHead = ListNode(1)
-    addNodes(dummyHead, l1, l2, 0)
-    dummyHead.next
+  def solution(l1: ListNode, l2: ListNode): ListNode = {
+    val headList = ListNode()
+    addNodes(headList, l1, l2, 0)
+    headList.next
   }
 
 @tailrec
@@ -40,12 +40,12 @@ object Task_6 {
 
 
 object sol6 extends App {
-  println(s"Task 6 = ${Task_6.addTwoNumbers(ListNode(2, ListNode(4, ListNode(3))), ListNode(5, ListNode(6, ListNode(4))))}")
+  println(s"Task 6 = ${Task_6.solution(ListNode(2, ListNode(4, ListNode(3))), ListNode(5, ListNode(6, ListNode(4))))}")
   // Task 6 = ListNode(7,ListNode(0,ListNode(8,null)))
 
-  println(s"Task 6 = ${Task_6.addTwoNumbers(ListNode(), ListNode())}")
+  println(s"Task 6 = ${Task_6.solution(ListNode(), ListNode())}")
   // Task 6 = ListNode(0, null)
 
-  println(s"Task 6 = ${Task_6.addTwoNumbers(ListNode(9, ListNode(9, ListNode(9, ListNode(9,ListNode(9,ListNode(9, ListNode(9))))))), ListNode(9, ListNode(9, ListNode(9, ListNode(9)))))}")
+  println(s"Task 6 = ${Task_6.solution(ListNode(9, ListNode(9, ListNode(9, ListNode(9,ListNode(9,ListNode(9, ListNode(9))))))), ListNode(9, ListNode(9, ListNode(9, ListNode(9)))))}")
   // Task 6 = ListNode(8,ListNode(9,ListNode(9,ListNode(9,ListNode(0,ListNode(0,ListNode(0,ListNode(1,null))))))))
 }
