@@ -2,12 +2,14 @@ package Tasks
 
 object Task_7 {
   def solution(nums: Array[Int]): Boolean = {
-    nums.zipWithIndex
-      .foldLeft((0,0)){ (a, b) =>
-      if (a._1 < b._2 + b._1 && b._2 <= a._2) (b._2 + b._1, b._2 + b._1)
-      else a
+    val (maxJump, _) = nums
+      .zipWithIndex
+      .foldLeft((0,0)){
+        case ((accJump, accInd), (elemJump,elemInd))
+          if accJump < elemInd + elemJump && elemInd <= accInd => (elemInd + elemJump, elemInd + elemJump)
+        case ((accJump, accInd), _) => (accJump, accInd)
       }
-      ._1 >= nums.length - 1
+    maxJump >= nums.length - 1
   }
 }
 

@@ -112,15 +112,5 @@ def findTail (a : ListNode): ListNode = {
   } else a
 }
 
-def solution2 (acc: ListNode, l1: ListNode, l2: ListNode, carry: Int, pos:Int): ListNode = {
-  if (l1 == null && l2 == null && carry == 0) {
-    acc
-  } else  {
-    val sum = l1.x + l2.x + carry
-    val tail = findTail(acc)
-    println(tail)
-
-  }
-}
-
-findTail(a)
+val s = "abc"
+val p = s.substring(3)
